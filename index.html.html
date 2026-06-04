@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lontar Sewu - Wisata Edukasi & Alam Edukasi Gresik</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        },
+                        secondary: '#d97706', // Amber-600
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* Hero Section Overlay */
+        .hero-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+        }
+
+        /* Card Hover Effect */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #22c55e;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #15803d;
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 300px; /* Adjust as needed */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-primary-600 text-3xl"></i>
+                        <span class="font-bold text-2xl text-gray-900 tracking-tight">Lontar<span class="text-primary-600">Sewu</span></span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Tentang</a>
+                    <a href="#fasilitas" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Fasilitas</a>
+                    <a href="#galeri" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Galeri</a>
+                    <a href="#lokasi" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Lokasi</a>
+                    <a href="#tiket" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg shadow-primary-600/30">Pesan Tiket</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#beranda" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Beranda</a>
+                <a href="#tentang" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Tentang</a>
+                <a href="#fasilitas" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Fasilitas</a>
+                <a href="#galeri" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Galeri</a>
+                <a href="#lokasi" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Lokasi</a>
+                <a href="#tiket" class="block px-3 py-3 mt-2 text-center text-base font-medium text-white bg-primary-600 hover:bg-primary-700 rounded-md">Pesan Tiket</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative h-screen flex items-center justify-center pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <!-- Placeholder for a beautiful landscape of Lontar trees -->
+            <img src="https://placehold.co/1920x1080/1a472a/ffffff?text=Pemandangan+Pohon+Lontar+yang+Indah" alt="Pemandangan Lontar Sewu" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-primary-500/20 text-primary-100 backdrop-blur-sm border border-primary-500/30 font-semibold tracking-wider text-sm mb-6 animate-fade-in-up">
+                WISATA EDUKASI & ALAM GRESIK
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+                Temukan Kedamaian di Bawah <span class="text-primary-400">Ribuan Daun Lontar</span>
+            </h1>
+            <p class="mt-4 text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto drop-shadow-md">
+                Destinasi wisata keluarga yang memadukan keindahan alam pedesaan, edukasi, dan wahana permainan seru di Eduwisata Lontar Sewu, Hendrosari, Menganti.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#fasilitas" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-primary-600/50 flex items-center justify-center gap-2">
+                    Jelajahi Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#video-tour" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-play"></i> Tonton Video
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <a href="#tentang" class="text-white/70 hover:text-white">
+                <i class="fa-solid fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <!-- Placeholder for people enjoying the scenery -->
+                        <img src="https://placehold.co/600x700/e2e8f0/475569?text=Pengunjung+di+Lontar+Sewu" alt="Pengunjung menikmati Lontar Sewu" class="rounded-2xl shadow-2xl object-cover w-full h-[500px]" />
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl hidden md:block">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-primary-100 p-3 rounded-full">
+                                    <i class="fa-solid fa-star text-primary-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-3xl font-bold text-gray-900">4.5<span class="text-lg text-gray-500 font-normal">/5</span></p>
+                                    <p class="text-sm text-gray-500 font-medium">Rating Pengunjung</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="inline-block mb-4 px-3 py-1 rounded-full bg-primary-50 text-primary-700 font-semibold text-sm border border-primary-100">
+                        Tentang Lontar Sewu
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                        Oase Hijau di Tengah Kesibukan Kota
+                    </h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Eduwisata Lontar Sewu yang terletak di Desa Hendrosari, Kecamatan Menganti, Gresik menawarkan pengalaman wisata yang unik. Nama "Lontar Sewu" diambil dari banyaknya pohon siwalan (lontar) yang tumbuh subur di desa ini.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        Kami tidak hanya menyajikan pemandangan alam yang asri, tetapi juga berbagai wahana permainan anak, spot foto instagramable, dan wisata edukasi mengenal proses pembuatan minuman legen dan gula merah khas Hendrosari.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex gap-4">
+                            <div class="text-primary-600 text-2xl mt-1"><i class="fa-solid fa-check-circle"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Wisata Edukasi</h4>
+                                <p class="text-gray-500 text-sm mt-1">Belajar alam & budaya lokal</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-primary-600 text-2xl mt-1"><i class="fa-solid fa-check-circle"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Ramah Anak</h4>
+                                <p class="text-gray-500 text-sm mt-1">Banyak wahana permainan</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-primary-600 text-2xl mt-1"><i class="fa-solid fa-check-circle"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Spot Foto</h4>
+                                <p class="text-gray-500 text-sm mt-1">Beragam sudut estetik</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-primary-600 text-2xl mt-1"><i class="fa-solid fa-check-circle"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Kuliner Khas</h4>
+                                <p class="text-gray-500 text-sm mt-1">Ayam bakar & minuman legen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wahana & Fasilitas -->
+    <section id="fasilitas" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block mb-4 px-3 py-1 rounded-full bg-primary-50 text-primary-700 font-semibold text-sm border border-primary-100">
+                    Wahana & Fasilitas
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nikmati Keseruan Tanpa Batas</h2>
+                <p class="text-gray-600 text-lg">Beragam pilihan wahana permainan untuk anak-anak hingga dewasa, serta fasilitas lengkap untuk kenyamanan liburan Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://placehold.co/600x400/cbd5e1/475569?text=Perahu+Bebek" alt="Perahu Bebek" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary shadow-sm">
+                            Tiket: Rp 15.000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Perahu Bebek</h3>
+                        <p class="text-gray-600 mb-4">Mengelilingi telaga buatan sambil menikmati sejuknya semilir angin di bawah pohon lontar bersama keluarga atau pasangan.</p>
+                        <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-1">Detail Wahana <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://placehold.co/600x400/cbd5e1/475569?text=Kereta+Sawah" alt="Kereta Sawah" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-secondary shadow-sm">
+                            Tiket: Rp 10.000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Kereta Sawah</h3>
+                        <p class="text-gray-600 mb-4">Ajak si kecil berkeliling area Lontar Sewu menggunakan kereta mini melintasi rimbunnya pepohonan yang asri.</p>
+                        <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-1">Detail Wahana <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://placehold.co/600x400/cbd5e1/475569?text=Taman+Kelinci" alt="Taman Kelinci" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Taman Kelinci</h3>
+                        <p class="text-gray-600 mb-4">Wisata edukasi berinteraksi langsung, memberi makan, dan bermain bersama kelinci-kelinci lucu di taman terbuka.</p>
+                        <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-1">Detail Wahana <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://placehold.co/600x400/cbd5e1/475569?text=Spot+Foto" alt="Spot Foto Lontar Sewu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-primary-600 px-3 py-1 rounded-full text-sm font-bold text-white shadow-sm">
+                            Gratis
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Spot Foto Estetik</h3>
+                        <p class="text-gray-600 mb-4">Berbagai ornamen unik berlatar belakang pepohonan lontar yang hijau, sangat cocok untuk menambah koleksi foto media sosial Anda.</p>
+                        <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-1">Lihat Galeri <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://placehold.co/600x400/cbd5e1/475569?text=Kuliner+Ayam+Bakar" alt="Kuliner Khas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sentra Kuliner</h3>
+                        <p class="text-gray-600 mb-4">Nikmati hidangan khas Menganti, Ayam Bakar yang lezat disandingkan dengan kesegaran minuman Legen asli dari pohon siwalan.</p>
+                        <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-1">Lihat Menu <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </div>
+
+                 <!-- Card 6 -->
+                 <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift group border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://placehold.co/600x400/cbd5e1/475569?text=Fasilitas+Umum" alt="Fasilitas Umum" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Fasilitas Umum</h3>
+                        <p class="text-gray-600 mb-4">Dilengkapi area parkir luas, mushola yang nyaman, toilet bersih, dan pendopo untuk tempat bersantai keluarga besar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Tiket & Jam Buka -->
+    <section class="py-16 bg-primary-600 relative overflow-hidden" id="tiket">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-primary-500 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-primary-700 opacity-50 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Rencanakan Kunjungan Anda</h2>
+                        <p class="text-primary-100 text-lg mb-8">Pesan tiket lebih awal untuk menghindari antrean panjang, terutama di akhir pekan dan hari libur nasional.</p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-white text-primary-700 hover:bg-gray-50 px-8 py-3 rounded-xl font-bold text-lg transition-colors shadow-lg flex justify-center items-center gap-2">
+                                <i class="fa-solid fa-ticket"></i> Beli Tiket Masuk
+                            </button>
+                            <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-xl font-bold text-lg transition-colors flex justify-center items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Hubungi Admin
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+                            <i class="fa-solid fa-clock text-3xl text-secondary mb-3"></i>
+                            <h4 class="text-white font-bold text-lg mb-1">Jam Operasional</h4>
+                            <p class="text-primary-100 text-sm">Senin - Minggu</p>
+                            <p class="text-white font-bold text-xl mt-1">08.00 - 17.00 WIB</p>
+                        </div>
+                        <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+                            <i class="fa-solid fa-ticket-simple text-3xl text-secondary mb-3"></i>
+                            <h4 class="text-white font-bold text-lg mb-1">Tiket Masuk</h4>
+                            <p class="text-primary-100 text-sm">Senin - Jumat</p>
+                            <p class="text-white font-bold text-xl mt-1">Rp 8.000</p>
+                            <p class="text-primary-100 text-sm mt-2">Sabtu/Minggu/Libur</p>
+                            <p class="text-white font-bold text-xl">Rp 10.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <div class="inline-block mb-4 px-3 py-1 rounded-full bg-primary-50 text-primary-700 font-semibold text-sm border border-primary-100">
+                        Galeri Momen
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tangkap Momen Terbaikmu</h2>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-2">Lihat Semua <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Masonry-like Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl">
+                    <img src="https://placehold.co/800x600/e2e8f0/475569?text=Jembatan+Kayu+Lontar" alt="Galeri 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">Jembatan Kayu Estetik</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl">
+                    <img src="https://placehold.co/400x400/cbd5e1/475569?text=Wahana+Anak" alt="Galeri 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Keceriaan Anak</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl">
+                    <img src="https://placehold.co/400x400/94a3b8/ffffff?text=Minuman+Legen" alt="Galeri 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium">Legen Segar</p>
+                    </div>
+                </div>
+                <div class="col-span-2 relative group overflow-hidden rounded-2xl">
+                    <img src="https://placehold.co/800x400/cbd5e1/475569?text=Pemandangan+Sore" alt="Galeri 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-medium text-lg">Senja di Lontar Sewu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                <button class="border-2 border-primary-600 text-primary-700 px-6 py-2 rounded-full font-semibold hover:bg-primary-50 transition-colors">
+                    Muat Lebih Banyak
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lokasi -->
+    <section id="lokasi" class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <div class="lg:col-span-1">
+                    <div class="inline-block mb-4 px-3 py-1 rounded-full bg-primary-50 text-primary-700 font-semibold text-sm border border-primary-100">
+                        Lokasi Kami
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Cara Menuju Ke Sini</h2>
+                    <p class="text-gray-600 mb-8">Berlokasi strategis di Gresik Selatan, mudah dijangkau dari pusat kota Surabaya maupun kota Gresik.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-primary-600 shrink-0 border border-gray-100">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Alamat Lengkap</h4>
+                                <p class="text-gray-600 text-sm">Jln. Raya Hendrosari, Desa Hendrosari, Kec. Menganti, Kabupaten Gresik, Jawa Timur 61174</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-primary-600 shrink-0 border border-gray-100">
+                                <i class="fa-solid fa-car text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Akses Kendaraan</h4>
+                                <p class="text-gray-600 text-sm">Jalan beraspal mulus, dapat dilalui oleh sepeda motor, mobil keluarga, hingga bus pariwisata medium.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <a href="https://maps.google.com" target="_blank" class="w-full bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-bold transition-colors flex justify-center items-center gap-2">
+                                <i class="fa-solid fa-map-location-dot"></i> Buka di Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-2 h-[400px] lg:h-auto rounded-2xl overflow-hidden shadow-md border border-gray-200 bg-gray-200 relative flex items-center justify-center">
+                    <!-- Placeholder for Maps iframe -->
+                    <div class="text-center p-8 bg-white/80 backdrop-blur rounded-xl shadow-lg m-4">
+                        <i class="fa-solid fa-map-location-dot text-4xl text-gray-400 mb-3"></i>
+                        <h3 class="text-lg font-bold text-gray-800">Peta Interaktif (Google Maps)</h3>
+                        <p class="text-gray-500 text-sm mt-2">Area ini akan menampilkan iframe Google Maps yang disematkan untuk Lontar Sewu Menganti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-leaf text-primary-500 text-3xl"></i>
+                        <span class="font-bold text-2xl text-white tracking-tight">Lontar<span class="text-primary-500">Sewu</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Eduwisata alam dan keluarga terbaik di Gresik. Menghadirkan kesejukan alam desa dengan fasilitas modern.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Tautan Cepat</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#beranda" class="hover:text-primary-400 transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-primary-400 transition-colors">Tentang Kami</a></li>
+                        <li><a href="#fasilitas" class="hover:text-primary-400 transition-colors">Fasilitas & Wahana</a></li>
+                        <li><a href="#galeri" class="hover:text-primary-400 transition-colors">Galeri Foto</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Berita & Acara</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Informasi</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#tiket" class="hover:text-primary-400 transition-colors">Harga Tiket</a></li>
+                        <li><a href="#lokasi" class="hover:text-primary-400 transition-colors">Panduan Lokasi</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Kontak Kami</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone mt-1 text-primary-500"></i>
+                            <div>
+                                <p class="text-white font-medium">Telepon / WA</p>
+                                <p class="text-sm">+62 812-3456-7890</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-primary-500"></i>
+                            <div>
+                                <p class="text-white font-medium">Email</p>
+                                <p class="text-sm">info@lontarsewu.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Eduwisata Lontar Sewu. Hak Cipta Dilindungi.</p>
+                <p class="mt-2 md:mt-0">Didesain dengan <i class="fa-solid fa-heart text-red-500"></i> untuk Pariwisata Gresik</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('open');
+                if (menu.classList.contains('open')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.remove('open');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-lg', 'bg-white/95', 'backdrop-blur-md');
+                    navbar.classList.remove('shadow-md', 'bg-white');
+                } else {
+                    navbar.classList.add('shadow-md', 'bg-white');
+                    navbar.classList.remove('shadow-lg', 'bg-white/95', 'backdrop-blur-md');
+                }
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if(href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if(target) {
+                            const headerOffset = 80;
+                            const elementPosition = target.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: "smooth"
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
