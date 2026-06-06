@@ -122,99 +122,19 @@ footer{background:#020617;color:#fff;text-align:center;padding:35px}
 
 <h2 class="title">Form Booking Outbound</h2>
 
-<form id="bookingForm" class="card" style="max-width:800px;margin:auto">
-
-<div style="margin-bottom:15px">
-<label>Nama Sekolah / Instansi</label>
-<input type="text" id="sekolah" required style="width:100%;padding:12px;margin-top:5px">
-</div>
-
-<div style="margin-bottom:15px">
-<label>Nama PIC</label>
-<input type="text" id="pic" required style="width:100%;padding:12px;margin-top:5px">
-</div>
-
-<div style="margin-bottom:15px">
-<label>Nomor WhatsApp</label>
-<input type="tel" id="wa" required style="width:100%;padding:12px;margin-top:5px">
-</div>
-
-<div style="margin-bottom:15px">
-<label>Alamat Sekolah</label>
-<textarea id="alamat" rows="3" style="width:100%;padding:12px;margin-top:5px"></textarea>
-</div>
-
-<div style="margin-bottom:15px">
-<label>Tanggal Kunjungan</label>
-<input type="date" id="tanggal" required style="width:100%;padding:12px;margin-top:5px">
-</div>
-
-<div style="margin-bottom:15px">
-<label>Jumlah Peserta</label>
-<input type="number" id="peserta" required style="width:100%;padding:12px;margin-top:5px">
-</div>
-
-<div style="margin-bottom:15px">
-<label>Paket</label>
-<select id="paket" required style="width:100%;padding:12px;margin-top:5px">
-<option value="">Pilih Paket</option>
-<option>Bronze - Rp75.000</option>
-<option>Silver - Rp90.000</option>
-<option>Gold - Rp120.000</option>
-</select>
-</div>
-
-<div style="margin-bottom:15px">
-<label>Catatan Tambahan</label>
-<textarea id="catatan" rows="4" style="width:100%;padding:12px;margin-top:5px"></textarea>
-</div>
-
-<button type="submit" class="btn">
-Booking via WhatsApp
-</button>
-
-</form>
+<iframe
+src="https://docs.google.com/forms/d/e/1FAIpQLSfVmgJ1StZoaqmdArRxFLD8uDoWAO2x-LQOTomvQwy94uAltA/viewform?embedded=true"
+width="100%"
+height="1800"
+frameborder="0"
+marginheight="0"
+marginwidth="0">
+Loading...
+</iframe>
 
 </div>
 </section>
-
 <footer>© 2026 Edu Wisata Lontar Sewu</footer>
 <a class='wa' href='https://wa.me/628385903781'>WhatsApp</a>
 <script>
-document.getElementById("bookingForm").addEventListener("submit", function(e){
-
-e.preventDefault();
-
-let sekolah = document.getElementById("sekolah").value;
-let pic = document.getElementById("pic").value;
-let wa = document.getElementById("wa").value;
-let alamat = document.getElementById("alamat").value;
-let tanggal = document.getElementById("tanggal").value;
-let peserta = document.getElementById("peserta").value;
-let paket = document.getElementById("paket").value;
-let catatan = document.getElementById("catatan").value;
-
-let pesan =
-`Halo Admin Edu Wisata Lontar Sewu 👋
-
-Saya ingin melakukan booking outbound.
-
-🏫 Nama Sekolah : ${sekolah}
-👤 Nama PIC : ${pic}
-📱 Nomor WA : ${wa}
-📍 Alamat : ${alamat}
-📅 Tanggal Kunjungan : ${tanggal}
-👥 Jumlah Peserta : ${peserta}
-🎫 Paket : ${paket}
-
-📝 Catatan :
-${catatan}`;
-
-window.open(
-`https://wa.me/628385903781?text=${encodeURIComponent(pesan)}`,
-'_blank'
-);
-
-});
-</script>
 </body></html>
