@@ -709,18 +709,93 @@ z-index:999;
 RESPONSIVE
 ================================== */
 
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
 @media(max-width:768px){
 
+header{
+    background:rgba(8,18,36,.95);
+}
+
+nav{
+    padding:10px 15px;
+}
+
+.logo{
+    height:50px;
+}
+
+.btn{
+    padding:12px 20px;
+    font-size:15px;
+}
+
 .menu{
-display:none;
+    display:none;
+}
+
+.hero{
+    min-height:100vh;
+    padding:120px 15px 50px;
+}
+
+.hero-box{
+    padding:10px;
+}
+
+.badge{
+    font-size:13px;
+    padding:8px 12px;
 }
 
 .hero h1{
-font-size:40px;
+    font-size:34px;
+    line-height:1.15;
+    margin-bottom:15px;
 }
 
 .hero p{
-font-size:18px;
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    align-items:center;
+}
+
+.hero-buttons .btn{
+    width:90%;
+    text-align:center;
+}
+
+.title{
+    font-size:30px;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.package img,
+.gallery img{
+    height:auto;
+}
+
+.wa{
+    bottom:15px;
+    right:15px;
+    padding:14px 18px;
+    font-size:14px;
+}
+
 }
 
 .keunggulan h2,
