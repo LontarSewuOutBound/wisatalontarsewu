@@ -39,16 +39,6 @@ padding:0 20px;
 HERO CONTAINER
 ========================= */
 
-.hero .container{
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-```
-
-
 /* =========================
 HEADER
 ========================= */
@@ -106,41 +96,44 @@ background:rgba(255,255,255,.12);
 HERO
 ========================= */
 
+```css id="hero-final-center"
 .hero{
 position:relative;
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
 padding:120px 20px;
+text-align:center;
 color:white;
 overflow:hidden;
-  
+
 background:
 linear-gradient(
 rgba(0,0,0,.60),
 rgba(0,0,0,.45)
 ),
 url('../img/hero.webp');
+
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 }
 
-```css id="x4p9n7"
-```css id="u4n8k2"
+```css id="hero-box-final"
 .hero-box{
 width:100%;
 max-width:900px;
-margin:0 auto;
+margin:auto;
+
 display:flex;
 flex-direction:column;
+
 justify-content:center;
 align-items:center;
+
 text-align:center;
 }
-```
 
 .badge{
 display:inline-block;
@@ -359,4 +352,21 @@ font-weight:700;
 z-index:999;
 box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
-```
+
+```css id="force-center-final"
+/* =========================
+FORCE HERO CENTER
+========================= */
+
+.hero *{
+text-align:center !important;
+}
+
+.hero-buttons{
+justify-content:center !important;
+}
+
+.hero p{
+margin-left:auto;
+margin-right:auto;
+}
