@@ -57,4 +57,28 @@ transition:.4s;
 transform:translateY(-8px);
 }
 ```
+/* =========================
+FLOATING HERO
+========================= */
+.hero-box{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+animation:floating 4s ease-in-out infinite;
+}
 
+@keyframes floating{
+  
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+100%{
+transform:translateY(0px);
+}
+}
