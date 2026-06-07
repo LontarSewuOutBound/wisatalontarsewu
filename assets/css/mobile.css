@@ -26,7 +26,22 @@ height:42px;
 }
 
 .menu{
+display:flex;
+gap:14px;
+overflow-x:auto;
+white-space:nowrap;
+padding-bottom:6px;
+}
+
+.menu::-webkit-scrollbar{
 display:none;
+}
+
+.menu a{
+font-size:14px;
+padding:8px 14px;
+background:rgba(255,255,255,.12);
+border-radius:999px;
 }
 
 .hero{
