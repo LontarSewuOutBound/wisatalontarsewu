@@ -1,1 +1,121 @@
+```css id="nj0b2j"
+@media(max-width:992px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero h1{
+font-size:52px;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+background:rgba(8,18,36,.96);
+}
+
+nav{
+padding:14px 18px;
+}
+
+.logo{
+height:42px;
+}
+
+.menu{
+display:none;
+}
+
+.hero{
+min-height:100vh;
+padding:120px 20px 70px;
+background-position:center;
+}
+
+.hero-box{
+width:100%;
+}
+
+.badge{
+font-size:12px;
+padding:8px 14px;
+margin-bottom:14px;
+}
+
+.hero h1{
+font-size:34px;
+line-height:1.2;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:16px;
+line-height:1.7;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+flex-direction:column;
+gap:14px;
+}
+
+.hero-buttons .btn{
+width:100%;
+}
+
+.btn{
+padding:13px 18px;
+font-size:14px;
+}
+
+section{
+padding:70px 18px;
+}
+
+.title{
+font-size:30px;
+line-height:1.2;
+margin-bottom:38px;
+}
+
+.grid{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.card{
+padding:22px;
+border-radius:22px;
+}
+
+.gallery img{
+height:220px;
+}
+
+.package img{
+border-radius:18px;
+}
+
+iframe{
+height:550px;
+border-radius:18px;
+}
+
+footer{
+font-size:14px;
+padding:30px 20px;
+}
+
+.wa{
+right:14px;
+bottom:14px;
+padding:12px 16px;
+font-size:13px;
+}
+
+}
+```
 
