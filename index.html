@@ -1232,20 +1232,13 @@ let nama = document.getElementById("nama").value;
 let alamat = document.getElementById("alamat").value;
 let peserta = document.getElementById("peserta").value;
 let tanggal = document.getElementById("tanggal").value;
-let paket = document.getElementById("paket");
-console.log(paket);
-console.log(paket.value);
 
-paket = paket.value;
-if(
-nama === "" ||
-peserta === "" ||
-tanggal === "" ||
-paket === ""
-){
-alert("Lengkapi data booking.");
-return;
-}
+const paketElement = document.getElementById("paket");
+
+alert("Paket element: " + paketElement);
+alert("Paket value: " + paketElement.value);
+
+let paket = paketElement.value;
 
 let pesan =
 `Halo Admin Edu Wisata Lontar Sewu
@@ -1254,13 +1247,10 @@ Nama Sekolah : ${nama}
 Alamat : ${alamat}
 Jumlah Peserta : ${peserta}
 Tanggal : ${tanggal}
-Paket : ${paket}
-
-Mohon informasi lebih lanjut.`;
+Paket : ${paket}`;
 
 window.open(
-"https://wa.me/628385903781?text=" +
-encodeURIComponent(pesan),
+"https://wa.me/628385903781?text="+encodeURIComponent(pesan),
 "_blank"
 );
 
