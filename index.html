@@ -1151,9 +1151,9 @@ Isi data berikut dan kami akan menghubungi Anda melalui WhatsApp.
 <select id="paket">
 
 <option value="">Pilih Paket</option>
-<option>Bronze</option>
-<option>Silver</option>
-<option>Gold</option>
+<option value="Bronze">Bronze</option>
+<option value="Silver">Silver</option>
+<option value="Gold">Gold</option>
 
 </select>
 
@@ -1232,8 +1232,7 @@ let nama=document.getElementById("nama").value;
 let alamat=document.getElementById("alamat").value;
 let peserta=document.getElementById("peserta").value;
 let tanggal=document.getElementById("tanggal").value;
-let paket = document.getElementById("paket");
-paket = paket.options[paket.selectedIndex].text;
+let paket = document.getElementById("paket").value;
 
 if(
 nama==="" ||
