@@ -120,7 +120,6 @@ background-position:center;
 background-repeat:no-repeat;
 }
 
-```css id="hero-box-final"
 .hero-box{
 width:100%;
 max-width:900px;
@@ -145,7 +144,6 @@ margin-bottom:20px;
 backdrop-filter:blur(10px);
 }
 
-```css id="q8m1n5"
 .hero h1{
 font-size:68px;
 line-height:1.1;
@@ -164,7 +162,6 @@ margin-bottom:35px;
 opacity:.95;
 }
 
-```css id="u2m5k8"
 .hero-buttons{
 display:flex;
 justify-content:center;
