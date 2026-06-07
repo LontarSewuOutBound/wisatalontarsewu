@@ -13,6 +13,144 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+/* ==========================
+FAQ
+========================== */
+
+.faq-section{
+padding:100px 20px;
+background:#f8fafc;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:white;
+border-radius:15px;
+margin-bottom:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.faq-question{
+width:100%;
+padding:20px;
+border:none;
+background:white;
+text-align:left;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+padding:20px;
+border-top:1px solid #eee;
+color:#555;
+}
+
+/* ==========================
+BOOKING
+========================== */
+
+.booking-section{
+padding:100px 20px;
+background:#0F172A;
+color:white;
+}
+
+.booking-box{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.booking-box input,
+.booking-box select{
+padding:16px;
+border:none;
+border-radius:12px;
+font-size:16px;
+}
+
+.booking-box button{
+padding:18px;
+border:none;
+background:#16A34A;
+color:white;
+font-size:18px;
+font-weight:700;
+border-radius:12px;
+cursor:pointer;
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+footer{
+background:#020617;
+color:white;
+padding:60px 20px 20px;
+}
+
+.footer-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.footer-grid h3{
+margin-bottom:15px;
+}
+
+.footer-grid p{
+line-height:1.8;
+}
+
+.copyright{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.1);
+}
+
+/* ==========================
+FLOATING WA
+========================== */
+
+.floating-wa{
+position:fixed;
+right:20px;
+bottom:20px;
+
+width:65px;
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:30px;
+
+text-decoration:none;
+
+z-index:99999;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
 <style>
 
 *{
@@ -339,6 +477,159 @@ margin-bottom:10px;
 MOBILE
 ========================== */
 
+/* ==========================
+PAKET
+========================== */
+
+.paket-section{
+padding:100px 20px;
+background:white;
+}
+
+.paket-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.paket-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.paket-card:hover{
+transform:translateY(-10px);
+}
+
+.paket-card img{
+width:100%;
+display:block;
+}
+
+.paket-content{
+padding:25px;
+}
+
+.harga{
+font-size:30px;
+font-weight:800;
+color:#16A34A;
+margin:15px 0;
+}
+
+.paket-content ul{
+list-style:none;
+margin-bottom:20px;
+}
+
+.paket-content li{
+margin-bottom:10px;
+}
+
+.paket-btn{
+display:block;
+background:#16A34A;
+color:white;
+text-align:center;
+padding:14px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+}
+
+/* ==========================
+TIMELINE
+========================== */
+
+.timeline-section{
+padding:100px 20px;
+background:#f8fafc;
+}
+
+.timeline{
+max-width:800px;
+margin:auto;
+}
+
+.timeline-item{
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:16px;
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.timeline-item span{
+display:inline-block;
+font-weight:800;
+color:#16A34A;
+margin-right:15px;
+}
+
+/* ==========================
+GALERI
+========================== */
+
+.galeri-section{
+padding:100px 20px;
+}
+
+.gallery-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:18px;
+transition:.3s;
+cursor:pointer;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* ==========================
+TESTIMONI
+========================== */
+
+.testimoni-section{
+padding:100px 20px;
+background:white;
+}
+
+.testimoni-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testimoni-card{
+background:#f8fafc;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.06);
+}
+
+.bintang{
+font-size:24px;
+color:#FACC15;
+margin-bottom:15px;
+}
+  
 @media(max-width:768px){
 
 .menu{
@@ -373,7 +664,79 @@ font-size:22px;
 </style>
 
 </head>
+<script>
 
+function bookingWA(){
+
+let nama =
+document.getElementById("nama").value;
+
+let alamat =
+document.getElementById("alamat").value;
+
+let peserta =
+document.getElementById("peserta").value;
+
+let tanggal =
+document.getElementById("tanggal").value;
+
+let paket =
+document.getElementById("paket").value;
+
+if(
+nama==="" ||
+peserta==="" ||
+tanggal==="" ||
+paket===""){
+alert("Lengkapi data booking.");
+return;
+}
+
+let pesan =
+`Halo Admin Edu Wisata Lontar Sewu
+
+Nama Sekolah : ${nama}
+Alamat : ${alamat}
+Jumlah Peserta : ${peserta}
+Tanggal : ${tanggal}
+Paket : ${paket}
+
+Mohon informasi lebih lanjut.`;
+
+window.open(
+"https://wa.me/628385903781?text="+
+encodeURIComponent(pesan),
+"_blank"
+);
+
+}
+
+/* FAQ */
+
+const faqQuestion =
+document.querySelectorAll(".faq-question");
+
+faqQuestion.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+const answer =
+btn.nextElementSibling;
+
+if(answer.style.display==="block"){
+answer.style.display="none";
+}else{
+answer.style.display="block";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
 <body>
 
 <header>
