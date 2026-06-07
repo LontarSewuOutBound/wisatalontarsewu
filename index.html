@@ -674,7 +674,7 @@ LONTAR SEWU
 </div>
 
 <ul class="menu">
-<li><a href="#paket">Paket</a></li>
+<li><a href="#paket-outbound">Paket</a></li>
 <li><a href="#galeri">Galeri</a></li>
 <li><a href="#booking">Booking</a></li>
 </ul>
@@ -705,7 +705,7 @@ Flying Fox, Waterpark, Edukasi Pertanian dan Fun Games dalam satu paket kegiatan
 Booking Sekarang
 </a>
 
-<a href="#paket" class="btn-secondary">
+<a href="#paket-outbound" class="btn-secondary">
 Lihat Paket
 </a>
 
@@ -811,7 +811,7 @@ Tempat outbound edukatif yang menggabungkan pembelajaran, petualangan dan rekrea
 PAKET OUTBOUND
 ========================== -->
 
-<section id="paket" class="paket-section">
+<section id="paket-outbound" class="paket-section">
 
 <h2 class="section-title">
 Paket Outbound
@@ -1235,13 +1235,17 @@ let nama = document.getElementById("nama").value;
 let alamat = document.getElementById("alamat").value;
 let peserta = document.getElementById("peserta").value;
 let tanggal = document.getElementById("tanggal").value;
-
-const paketElement = document.getElementById("paket");
-
-alert("Paket element: " + paketElement);
-alert("Paket value: " + paketElement.value);
-
 let paket = document.getElementById("paket").value;
+
+if(
+nama === "" ||
+peserta === "" ||
+tanggal === "" ||
+paket === ""
+){
+alert("Lengkapi data booking.");
+return;
+}
 
 let pesan =
 `Halo Admin Edu Wisata Lontar Sewu
@@ -1250,10 +1254,13 @@ Nama Sekolah : ${nama}
 Alamat : ${alamat}
 Jumlah Peserta : ${peserta}
 Tanggal : ${tanggal}
-Paket : ${paket}`;
+Paket : ${paket}
+
+Mohon informasi lebih lanjut.`;
 
 window.open(
-"https://wa.me/628385903781?text="+encodeURIComponent(pesan),
+"https://wa.me/628385903781?text=" +
+encodeURIComponent(pesan),
 "_blank"
 );
 
