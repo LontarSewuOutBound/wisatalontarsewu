@@ -34,6 +34,21 @@ margin:auto;
 padding:0 20px;
 }
 
+```css id="v7m3q1"
+/* =========================
+HERO CONTAINER
+========================= */
+
+.hero .container{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+```
+
+
 /* =========================
 HEADER
 ========================= */
@@ -114,14 +129,15 @@ background-repeat:no-repeat;
 }
 
 ```css id="x4p9n7"
+```css id="u4n8k2"
 .hero-box{
 width:100%;
-max-width:850px;
+max-width:900px;
 margin:0 auto;
 display:flex;
 flex-direction:column;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 }
 ```
@@ -136,13 +152,17 @@ margin-bottom:20px;
 backdrop-filter:blur(10px);
 }
 
+```css id="q8m1n5"
 .hero h1{
 font-size:68px;
 line-height:1.1;
 margin-bottom:24px;
 font-weight:800;
 text-shadow:0 8px 30px rgba(0,0,0,.35);
+width:100%;
+text-align:center;
 }
+```
 
 .hero p{
 font-size:20px;
