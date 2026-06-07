@@ -675,7 +675,11 @@ box-shadow:0 10px 25px rgba(0,0,0,.25);
 LONTAR SEWU
 </div>
 
-<ul class="menu">
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<ul class="menu" id="mobileMenu">
 <li><a href="#paket-outbound">Paket</a></li>
 <li><a href="#galeri">Galeri</a></li>
 <li><a href="#booking">Booking</a></li>
@@ -1230,6 +1234,28 @@ target="_blank">
 
 </a>
 <script>
+
+function toggleMenu(){
+
+document
+.getElementById("mobileMenu")
+.classList
+.toggle("active");
+
+}
+
+function pilihPaket(namaPaket){
+
+document.getElementById("paket").value =
+namaPaket;
+
+document
+.getElementById("booking")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
 
 function bookingWA(){
 
