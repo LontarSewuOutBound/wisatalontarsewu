@@ -1,4 +1,8 @@
-```css id="nj0b2j"
+```css id="yzew5g"
+/* =========================
+TABLET
+========================= */
+
 @media(max-width:992px){
 
 .grid{
@@ -11,6 +15,10 @@ font-size:52px;
 
 }
 
+/* =========================
+MOBILE
+========================= */
+
 @media(max-width:768px){
 
 header{
@@ -18,6 +26,10 @@ background:rgba(8,18,36,.96);
 }
 
 nav{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:12px;
 padding:14px 18px;
 }
 
@@ -25,11 +37,17 @@ padding:14px 18px;
 height:42px;
 }
 
+/* =========================
+MOBILE MENU
+========================= */
+
 .menu{
-display:flex;
-gap:14px;
+display:flex !important;
+flex-wrap:nowrap;
 overflow-x:auto;
 white-space:nowrap;
+width:100%;
+gap:10px;
 padding-bottom:6px;
 }
 
@@ -38,15 +56,25 @@ display:none;
 }
 
 .menu a{
-font-size:14px;
-padding:8px 14px;
-background:rgba(255,255,255,.12);
+display:inline-flex !important;
+align-items:center;
+justify-content:center;
+padding:10px 16px;
 border-radius:999px;
+background:rgba(255,255,255,.14);
+color:white !important;
+font-size:14px;
+font-weight:600;
+flex-shrink:0;
 }
+
+/* =========================
+HERO
+========================= */
 
 .hero{
 min-height:100vh;
-padding:120px 20px 70px;
+padding:150px 20px 70px;
 background-position:center;
 }
 
@@ -81,10 +109,18 @@ gap:14px;
 width:100%;
 }
 
+/* =========================
+BUTTON
+========================= */
+
 .btn{
 padding:13px 18px;
 font-size:14px;
 }
+
+/* =========================
+SECTION
+========================= */
 
 section{
 padding:70px 18px;
@@ -96,33 +132,61 @@ line-height:1.2;
 margin-bottom:38px;
 }
 
+/* =========================
+GRID
+========================= */
+
 .grid{
 grid-template-columns:1fr;
 gap:18px;
 }
+
+/* =========================
+CARD
+========================= */
 
 .card{
 padding:22px;
 border-radius:22px;
 }
 
+/* =========================
+GALLERY
+========================= */
+
 .gallery img{
 height:220px;
 }
 
+/* =========================
+PACKAGE
+========================= */
+
 .package img{
 border-radius:18px;
 }
+
+/* =========================
+FORM
+========================= */
 
 iframe{
 height:550px;
 border-radius:18px;
 }
 
+/* =========================
+FOOTER
+========================= */
+
 footer{
 font-size:14px;
 padding:30px 20px;
 }
+
+/* =========================
+WHATSAPP
+========================= */
 
 .wa{
 right:14px;
@@ -133,4 +197,3 @@ font-size:13px;
 
 }
 ```
-
