@@ -1,185 +1,940 @@
 <!DOCTYPE html>
-<html lang='id'>
+<html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edu Wisata Lontar Sewu</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<title>Edu Wisata Lontar Sewu | Outbound Edukatif TK, PAUD, RA & SD</title>
+
+<meta name="description" content="Outbound Edukatif TK, PAUD, RA dan SD di Edu Wisata Lontar Sewu dengan Flying Fox, Waterpark, Edukasi Pertanian dan Fun Games.">
+
+<meta name="theme-color" content="#16A34A">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/components.css">
-<link rel="stylesheet" href="assets/css/mobile.css">
-<link rel="stylesheet" href="assets/css/animation.css">
-<title>Edu Wisata Lontar Sewu | Premium</title>
-<meta name='description' content='Outbound Edukatif dan Wisata Sekolah Lontar Sewu'>
-<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap' rel='stylesheet'>
+
 <style>
-:root{--green:#16a34a;--navy:#081224;--gold:#fbbf24;--white:#fff;}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-html{scroll-behavior:smooth} body{background:#f8fafc;color:#1e293b;overflow-x:hidden}
-header{position:fixed;top:0;width:100%;z-index:999;background:rgba(8,18,36,.75);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
-nav{max-width:1280px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{height:72px}
-.menu a{color:#fff;text-decoration:none;margin:0 14px;font-weight:600}
-.btn{background:var(--green);color:#fff;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:700}
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.6)),url('gallery2.png') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
-.hero-box{max-width:980px;padding:20px}
-.badge{display:inline-block;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.15);backdrop-filter:blur(12px);margin-bottom:20px}
-.hero h1{font-size:76px;line-height:1.05}
-.hero p{font-size:22px;max-width:850px;margin:20px auto 35px}
-section{padding:100px 20px}
-.container{max-width:1280px;margin:auto}
-.title{text-align:center;font-size:46px;margin-bottom:55px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.card{background:#fff;border-radius:28px;padding:32px;box-shadow:0 15px 40px rgba(0,0,0,.08);transition:.3s}
-.card:hover{transform:translateY(-10px)}
-.stats .card{text-align:center}
-.stats h3{font-size:52px;color:var(--green)}
-.glass{background:rgba(255,255,255,.08);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12)}
-.package img,.gallery img{width:100%;border-radius:18px}
-.gallery img{height:280px;object-fit:cover}
-.timeline{display:grid;gap:20px}
-.step{padding:25px;border-left:4px solid var(--green);background:white;border-radius:16px}
-.cta{background:linear-gradient(135deg,var(--navy),#123)}
-.cta .title,.cta p{color:#fff;text-align:center}
-.testi{font-style:italic}
-.faq details{background:#fff;padding:20px;border-radius:14px;margin-bottom:12px}
-footer{background:#020617;color:#fff;text-align:center;padding:35px}
-.wa{position:fixed;right:20px;bottom:20px;background:#25d366;color:#fff;text-decoration:none;padding:16px 24px;border-radius:999px;font-weight:700}.hero-buttons{display:flex;justify-content:center}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+color:#1e293b;
+overflow-x:hidden;
+}
+
+:root{
+--primary:#16A34A;
+--dark:#0F172A;
+--gold:#FACC15;
+--light:#FFFFFF;
+--gray:#64748B;
+}
+
+/* ==========================
+HEADER
+========================== */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:9999;
+
+background:rgba(15,23,42,.92);
+
+backdrop-filter:blur(10px);
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:15px 20px;
+}
+
+.logo{
+font-size:26px;
+font-weight:800;
+color:white;
+}
+
+.menu{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.btn-nav{
+background:var(--primary);
+color:white;
+padding:10px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* ==========================
+HERO
+========================== */
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.55)
+),
+
+url('pintumasuk.png');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+.hero h1{
+
+font-size:clamp(38px,6vw,72px);
+
+font-weight:800;
+
+line-height:1.2;
+
+margin-bottom:20px;
+}
+
+.hero p{
+
+font-size:20px;
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:30px;
+
+line-height:1.8;
+}
+
+.hero-buttons{
+
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+
+background:var(--primary);
+
+padding:16px 30px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:700;
+}
+
+.btn-secondary{
+
+background:white;
+
+padding:16px 30px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:#111;
+
+font-weight:700;
+}
+
+/* ==========================
+BADGE
+========================== */
+
+.badges{
+
+margin-top:40px;
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.badge{
+
+background:rgba(255,255,255,.15);
+
+padding:12px 18px;
+
+border-radius:50px;
+
+backdrop-filter:blur(10px);
+
+font-weight:600;
+}
+
+/* ==========================
+STATISTIK
+========================== */
+
+.stats{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:80px 20px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+}
+
+.stat-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+}
+
+.stat-card h2{
+
+font-size:42px;
+
+color:var(--primary);
+
+font-weight:800;
+
+margin-bottom:10px;
+}
+
+/* ==========================
+KEUNGGULAN
+========================== */
+
+.keunggulan{
+
+padding:80px 20px;
+
+max-width:1200px;
+
+margin:auto;
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:42px;
+
+font-weight:800;
+
+margin-bottom:15px;
+}
+
+.section-sub{
+
+text-align:center;
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:50px;
+
+color:var(--gray);
+}
+
+.fitur-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+}
+
+.fitur{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+}
+
+.fitur:hover{
+transform:translateY(-8px);
+}
+
+.fitur-icon{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.fitur h3{
+margin-bottom:10px;
+}
+
+/* ==========================
+MOBILE
+========================== */
+
 @media(max-width:768px){
-header{background:rgba(8,18,36,.95)}
-nav{padding:10px 15px}
-.logo{height:42px}
-.menu{display:none}
-.btn{padding:12px 18px;font-size:14px}
-.hero{height:auto;min-height:85vh;padding:120px 15px 40px}
-.hero-box{padding:10px}
-.badge{font-size:12px;padding:6px 12px;margin-bottom:12px}
-.hero h1{font-size:28px;line-height:1.15;max-width:320px;margin:0 auto 18px}
-.hero p{font-size:16px;line-height:1.5;max-width:340px;margin:0 auto 24px}
-.title{font-size:30px}
-.grid{grid-template-columns:1fr}
-.wa{padding:12px 16px;font-size:14px}
-}.hero h1{font-size:42px}.hero p{font-size:18px}.title{font-size:34px}}
+
+.menu{
+display:none;
+}
+
+.hero{
+height:auto;
+min-height:100vh;
+padding-top:120px;
+padding-bottom:80px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.logo{
+font-size:22px;
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
-<header> <nav class="container"> <a href="#"> <img src="LOGO EWLS NEW.png" class="logo"> </a> <div class="menu">
-<a href="#paket">Paket</a> <a href="#galeri">Galeri</a> <a href="#booking">Booking</a> <a href="#faq">FAQ</a> </div> </nav> </header>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+LONTAR SEWU
+</div>
+
+<ul class="menu">
+<li><a href="#paket">Paket</a></li>
+<li><a href="#galeri">Galeri</a></li>
+<li><a href="#booking">Booking</a></li>
+</ul>
+
+<a href="https://wa.me/628385903781" class="btn-nav">
+WhatsApp
+</a>
+
+</nav>
+
+</header>
 
 <section class="hero">
 
-<div class="hero-box fade-up">
-
-<span class="badge">
-🌾 Wisata Edukasi & Outbound Terbaik
-</span>
+<div class="hero-content">
 
 <h1>
-Outbound Seru di Alam Terbuka
+Outbound Edukatif Terbaik untuk TK, PAUD, RA & SD
 </h1>
 
 <p>
-Belajar, bermain, dan petualangan seru bersama Edu Wisata Lontar Sewu.
-Cocok untuk TK, SD, SMP, komunitas, dan family gathering.
+Flying Fox, Waterpark, Edukasi Pertanian dan Fun Games dalam satu paket kegiatan yang aman, menyenangkan dan berkesan.
 </p>
 
 <div class="hero-buttons">
 
-<a class="btn btn-primary" href="#booking">
+<a href="#booking" class="btn-primary">
 Booking Sekarang
 </a>
 
-<a class="btn btn-outline" href="#galeri">
-Lihat Galeri
+<a href="#paket" class="btn-secondary">
+Lihat Paket
+</a>
+
+</div>
+
+<div class="badges">
+
+<div class="badge">
+✓ 10.000+ Peserta
+</div>
+
+<div class="badge">
+✓ 200+ Sekolah
+</div>
+
+<div class="badge">
+✓ Rating 4.9
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>10.000+</h2>
+<p>Peserta</p>
+</div>
+
+<div class="stat-card">
+<h2>200+</h2>
+<p>Sekolah</p>
+</div>
+
+<div class="stat-card">
+<h2>8+</h2>
+<p>Wahana Edukasi</p>
+</div>
+
+<div class="stat-card">
+<h2>4.9★</h2>
+<p>Kepuasan Pengunjung</p>
+</div>
+
+</section>
+
+<section class="keunggulan">
+
+<h2 class="section-title">
+Mengapa Memilih Lontar Sewu?
+</h2>
+
+<p class="section-sub">
+Tempat outbound edukatif yang menggabungkan pembelajaran, petualangan dan rekreasi dalam satu lokasi.
+</p>
+
+<div class="fitur-grid">
+
+<div class="fitur">
+<div class="fitur-icon">🌱</div>
+<h3>Edukasi Pertanian</h3>
+<p>Belajar langsung di lingkungan alam yang menyenangkan.</p>
+</div>
+
+<div class="fitur">
+<div class="fitur-icon">🪂</div>
+<h3>Flying Fox</h3>
+<p>Aktivitas favorit anak-anak dengan standar keamanan yang baik.</p>
+</div>
+
+<div class="fitur">
+<div class="fitur-icon">🏊</div>
+<h3>Waterpark</h3>
+<p>Area bermain air yang seru dan menyegarkan.</p>
+</div>
+
+<div class="fitur">
+<div class="fitur-icon">👨‍🏫</div>
+<h3>Fasilitator Profesional</h3>
+<p>Didampingi tim yang berpengalaman dalam kegiatan outbound.</p>
+</div>
+
+<div class="fitur">
+<div class="fitur-icon">📷</div>
+<h3>Dokumentasi</h3>
+<p>Momen terbaik peserta terdokumentasi dengan baik.</p>
+</div>
+
+<div class="fitur">
+<div class="fitur-icon">🌳</div>
+<h3>Area Luas</h3>
+<p>Lingkungan hijau dan nyaman untuk berbagai kegiatan.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+PAKET OUTBOUND
+========================== -->
+
+<section id="paket" class="paket-section">
+
+<h2 class="section-title">
+Paket Outbound
+</h2>
+
+<p class="section-sub">
+Pilih paket yang sesuai dengan kebutuhan sekolah dan peserta.
+</p>
+
+<div class="paket-grid">
+
+<div class="paket-card">
+
+<img src="PAKET BRONZE NEW.jpg" alt="Paket Bronze">
+
+<div class="paket-content">
+
+<h3>Bronze</h3>
+
+<div class="harga">
+Rp 75.000
+</div>
+
+<ul>
+<li>✓ Edukasi Pertanian</li>
+<li>✓ Fun Games</li>
+<li>✓ Pendamping</li>
+<li>✓ Area Bermain</li>
+</ul>
+
+<a href="#booking" class="paket-btn">
+Booking Paket
 </a>
 
 </div>
 
 </div>
 
-</section>
-  
-<section><div class='container'>
-<h2 class='title'>Dipercaya Sekolah Se-Indonesia</h2>
-<div class='grid stats'>
-<div class='card'><h3>10.000+</h3><p>Peserta</p></div>
-<div class='card'><h3>200+</h3><p>Sekolah</p></div>
-<div class='card'><h3>8+</h3><p>Wahana</p></div>
-<div class='card'><h3>4.9★</h3><p>Kepuasan</p></div>
-</div></div></section>
+<div class="paket-card">
 
-<section><div class='container'>
-<h2 class='title'>Keunggulan Kami</h2>
-<div class='grid'>
-<div class='card'>🌾 Edukasi Pertanian Interaktif</div>
-<div class='card'>🪂 Flying Fox Aman</div>
-<div class='card'>🏊 Waterpark Favorit Anak</div>
-<div class='card'>📷 Dokumentasi Kegiatan</div>
-<div class='card'>👨‍🏫 Tim Profesional</div>
-<div class='card'>🌳 Lingkungan Hijau dan Luas</div>
-</div></div></section>
+<img src="PAKET SILVER NEW.jpg" alt="Paket Silver">
 
-<section id='paket'><div class='container'>
-<h2 class='title'>Paket Outbound Premium</h2>
-<div class='grid package'>
-<div class='card'><img src='PAKET BRONZE NEW.png'><h3>Paket Bronze</h3></div>
-<div class='card'><img src='PAKET SILVER NEW.png'><h3>Paket Silver</h3></div>
-<div class='card'><img src='PAKET GOLD NEW.png'><h3>Paket Gold</h3></div>
-</div></div></section>
+<div class="paket-content">
 
-<section><div class='container'>
-<h2 class='title'>Alur Kegiatan</h2>
-<div class='timeline'>
-<div class='step'>1. Penyambutan Peserta</div>
-<div class='step'>2. Ice Breaking & Fun Games</div>
-<div class='step'>3. Wahana Edukatif</div>
-<div class='step'>4. Dokumentasi & Penutupan</div>
-</div></div></section>
+<h3>Silver</h3>
 
-<section id='galeri'><div class='container'>
-<h2 class='title'>Galeri Kegiatan</h2>
-<div class='grid gallery'>
-<img src='gallery1.png'><img src='gallery2.png'><img src='gallery3.png'><img src='gallery4.png'>
-<img src='gallery5.png'><img src='gallery6.png'><img src='gallery7.png'><img src='gallery8.png'>
-<img src='gallery9.png'><img src='gallery10.png'><img src='gallery11.png'><img src='gallery12.png'>
-<img src='gallery13.png'><img src='gallery14.png'><img src='gallery15.png'><img src='gallery16.png'>
-<img src='gallery17.png'><img src='gallery18.png'><img src='gallery19.png'><img src='gallery20.png'>
-</div></div></section>
+<div class="harga">
+Rp 90.000
+</div>
 
-<section><div class='container'>
-<h2 class='title'>Testimoni</h2>
-<div class='grid'>
-<div class='card testi'>"Anak-anak sangat antusias dan senang."</div>
-<div class='card testi'>"Lokasi bersih, aman dan edukatif."</div>
-<div class='card testi'>"Pelayanan panitia sangat profesional."</div>
-</div></div></section>
+<ul>
+<li>✓ Flying Fox</li>
+<li>✓ Edukasi Pertanian</li>
+<li>✓ Fun Games</li>
+<li>✓ Pendamping</li>
+</ul>
 
-<section id='faq'><div class='container faq'>
-<h2 class='title'>FAQ</h2>
-<details><summary>Minimal peserta?</summary><p>Silakan hubungi admin untuk informasi terbaru.</p></details>
-<details><summary>Apakah ada dokumentasi?</summary><p>Ya, tersedia dokumentasi kegiatan.</p></details>
-<details><summary>Bisa booking jauh hari?</summary><p>Bisa, sangat disarankan.</p></details>
-</div></section>
-
-<section id="booking">
-<div class="container">
-
-<h2 class="title">Form Booking Outbound</h2>
-
-<iframe
-src="https://docs.google.com/forms/d/e/1FAIpQLSfVmgJ1StZoaqmdArRxFLD8uDoWAO2x-LQOTomvQwy94uAltA/viewform?embedded=true"
-width="100%"
-height="1800"
-frameborder="0"
-marginheight="0"
-marginwidth="0">
-Loading...
-</iframe>
+<a href="#booking" class="paket-btn">
+Booking Paket
+</a>
 
 </div>
+
+</div>
+
+<div class="paket-card">
+
+<img src="PAKET GOLD NEW.jpg" alt="Paket Gold">
+
+<div class="paket-content">
+
+<h3>Gold</h3>
+
+<div class="harga">
+Rp 120.000
+</div>
+
+<ul>
+<li>✓ Flying Fox</li>
+<li>✓ Waterpark</li>
+<li>✓ Edukasi Pertanian</li>
+<li>✓ Dokumentasi</li>
+</ul>
+
+<a href="#booking" class="paket-btn">
+Booking Paket
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-<footer>© 2026 Edu Wisata Lontar Sewu</footer>
-<a class='wa' href='https://wa.me/628385903781'>WhatsApp</a>
-<script src="assets/js/main.js"></script> <script src="assets/js/navbar.js"></script> <script src="assets/js/animation.js"></script> <script src="assets/js/gallery.js"></script>
-</body></html>
+
+
+<!-- ==========================
+TIMELINE
+========================== -->
+
+<section class="timeline-section">
+
+<h2 class="section-title">
+Rundown Kegiatan
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<span>08.00</span>
+Registrasi Peserta
+</div>
+
+<div class="timeline-item">
+<span>08.30</span>
+Ice Breaking
+</div>
+
+<div class="timeline-item">
+<span>09.00</span>
+Edukasi Alam & Pertanian
+</div>
+
+<div class="timeline-item">
+<span>10.00</span>
+Flying Fox
+</div>
+
+<div class="timeline-item">
+<span>11.00</span>
+Waterpark
+</div>
+
+<div class="timeline-item">
+<span>12.00</span>
+Istirahat & Makan Siang
+</div>
+
+<div class="timeline-item">
+<span>13.00</span>
+Penutupan & Foto Bersama
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==========================
+GALERI
+========================== -->
+
+<section id="galeri" class="galeri-section">
+
+<h2 class="section-title">
+Galeri Kegiatan
+</h2>
+
+<p class="section-sub">
+Dokumentasi kegiatan outbound, edukasi dan wisata sekolah.
+</p>
+
+<div class="gallery-grid">
+
+<img src="gallery1.png" alt="">
+<img src="gallery2.png" alt="">
+<img src="gallery3.png" alt="">
+<img src="gallery4.png" alt="">
+
+<!-- FOTO TAMBAHAN -->
+
+<img src="images/gallery5.jpg" alt="">
+<img src="images/gallery6.jpg" alt="">
+<img src="images/gallery7.jpg" alt="">
+<img src="images/gallery8.jpg" alt="">
+<img src="images/gallery9.jpg" alt="">
+<img src="images/gallery10.jpg" alt="">
+<img src="images/gallery11.jpg" alt="">
+<img src="images/gallery12.jpg" alt="">
+<img src="images/gallery13.jpg" alt="">
+<img src="images/gallery14.jpg" alt="">
+<img src="images/gallery15.jpg" alt="">
+<img src="images/gallery16.jpg" alt="">
+<img src="images/gallery17.jpg" alt="">
+<img src="images/gallery18.jpg" alt="">
+<img src="images/gallery19.jpg" alt="">
+<img src="images/gallery20.jpg" alt="">
+
+</div>
+
+</section>
+
+
+<!-- ==========================
+TESTIMONI
+========================== -->
+
+<section class="testimoni-section">
+
+<h2 class="section-title">
+Apa Kata Mereka?
+</h2>
+
+<p class="section-sub">
+Pengalaman sekolah dan peserta yang pernah berkunjung.
+</p>
+
+<div class="testimoni-grid">
+
+<div class="testimoni-card">
+
+<div class="bintang">
+★★★★★
+</div>
+
+<p>
+Anak-anak sangat antusias mengikuti seluruh kegiatan. Tempatnya nyaman dan edukatif.
+</p>
+
+<h4>
+TK Aisyiyah
+</h4>
+
+</div>
+
+<div class="testimoni-card">
+
+<div class="bintang">
+★★★★★
+</div>
+
+<p>
+Flying Fox dan Waterpark menjadi aktivitas favorit siswa kami.
+</p>
+
+<h4>
+PAUD Melati
+</h4>
+
+</div>
+
+<div class="testimoni-card">
+
+<div class="bintang">
+★★★★★
+</div>
+
+<p>
+Tim fasilitator sangat membantu dan kegiatan berjalan tertib.
+</p>
+
+<h4>
+SD Negeri
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+FAQ
+========================== -->
+
+<section class="faq-section">
+
+<h2 class="section-title">
+Pertanyaan yang Sering Diajukan
+</h2>
+
+<div class="faq-container">
+
+<div class="faq-item">
+<button class="faq-question">
+Apakah kegiatan aman untuk TK dan PAUD?
+</button>
+<div class="faq-answer">
+Ya. Semua kegiatan didampingi fasilitator berpengalaman dan dirancang sesuai usia peserta.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Apakah tersedia Flying Fox?
+</button>
+<div class="faq-answer">
+Ya, tersedia Flying Fox sesuai paket yang dipilih.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Apakah tersedia Waterpark?
+</button>
+<div class="faq-answer">
+Ya, tersedia pada paket tertentu sesuai ketentuan.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Bagaimana cara booking?
+</button>
+<div class="faq-answer">
+Isi formulir booking di bawah atau hubungi WhatsApp Admin.
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==========================
+BOOKING
+========================== -->
+
+<section id="booking" class="booking-section">
+
+<h2 class="section-title">
+Booking Online
+</h2>
+
+<p class="section-sub">
+Isi data berikut dan kami akan menghubungi Anda melalui WhatsApp.
+</p>
+
+<div class="booking-box">
+
+<input type="text" id="nama" placeholder="Nama Sekolah">
+
+<input type="text" id="alamat" placeholder="Alamat Sekolah">
+
+<input type="number" id="peserta" placeholder="Jumlah Peserta">
+
+<input type="date" id="tanggal">
+
+<select id="paket">
+
+<option value="">Pilih Paket</option>
+<option>Bronze</option>
+<option>Silver</option>
+<option>Gold</option>
+
+</select>
+
+<button onclick="bookingWA()">
+Booking Sekarang
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ==========================
+FOOTER
+========================== -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Edu Wisata Lontar Sewu</h3>
+
+<p>
+Tempat outbound edukatif untuk TK, PAUD, RA dan SD dengan berbagai wahana edukasi dan permainan.
+</p>
+
+</div>
+
+<div>
+
+<h3>Kontak</h3>
+
+<p>WhatsApp : 0838-5903-8781</p>
+
+<p>Email : info@lontarsewu.com</p>
+
+</div>
+
+<div>
+
+<h3>Jam Operasional</h3>
+
+<p>Senin - Minggu</p>
+
+<p>08.00 - 16.00 WIB</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Edu Wisata Lontar Sewu
+</div>
+
+</footer>
+
+
+<!-- ==========================
+FLOATING WHATSAPP
+========================== -->
+
+<a href="https://wa.me/628385903781"
+class="floating-wa"
+target="_blank">
+
+💬
+
+</a>
