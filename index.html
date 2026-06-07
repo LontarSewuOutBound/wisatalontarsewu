@@ -1232,7 +1232,8 @@ let nama=document.getElementById("nama").value;
 let alamat=document.getElementById("alamat").value;
 let peserta=document.getElementById("peserta").value;
 let tanggal=document.getElementById("tanggal").value;
-let paket=document.getElementById("paket").value;
+let paket = document.getElementById("paket");
+paket = paket.options[paket.selectedIndex].text;
 
 if(
 nama==="" ||
