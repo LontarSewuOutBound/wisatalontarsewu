@@ -1228,17 +1228,18 @@ target="_blank">
 
 function bookingWA(){
 
-let nama=document.getElementById("nama").value;
-let alamat=document.getElementById("alamat").value;
-let peserta=document.getElementById("peserta").value;
-let tanggal=document.getElementById("tanggal").value;
+let nama = document.getElementById("nama").value;
+let alamat = document.getElementById("alamat").value;
+let peserta = document.getElementById("peserta").value;
+let tanggal = document.getElementById("tanggal").value;
 let paket = document.getElementById("paket").value;
 
 if(
-nama==="" ||
-peserta==="" ||
-tanggal==="" ||
-paket===""){
+nama === "" ||
+peserta === "" ||
+tanggal === "" ||
+paket === ""
+){
 alert("Lengkapi data booking.");
 return;
 }
@@ -1255,7 +1256,8 @@ Paket : ${paket}
 Mohon informasi lebih lanjut.`;
 
 window.open(
-"https://wa.me/628385903781?text="+encodeURIComponent(pesan),
+"https://wa.me/628385903781?text=" +
+encodeURIComponent(pesan),
 "_blank"
 );
 
